@@ -3,6 +3,20 @@ module.exports = {
     title: `Juan Pablo Castano`,
     description: `Juan Pablo's Personal Website`,
     author: `@JuanPabloC`,
+    menuLinks: [
+      {
+        name: `About Me`,
+        link: `/about`
+      },
+      {
+        name: `Resume`,
+        link:  `/resume`
+      },
+      {
+        name: `Awards`,
+        link: `/awards`
+      }
+    ]
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

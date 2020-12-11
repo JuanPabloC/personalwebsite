@@ -18,6 +18,10 @@ const Layout = ({ children }) => {
       site {
         siteMetadata {
           title
+          menuLinks {
+            name
+            link
+          }
         }
       }
     }
@@ -27,7 +31,8 @@ const Layout = ({ children }) => {
     <div 
       className="flexThisBox"
     >
-    <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+    <Header menuLinks={data.site.siteMetadata.menuLinks} 
+            siteTitle={data.site.siteMetadata?.title || `Title`} />
     <main>{children}</main>
     <footer style={{
         marginTop: `2rem`
