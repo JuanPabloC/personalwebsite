@@ -1,5 +1,18 @@
+/* 
+Color Palette Cheat Sheet
+
+HEX
+
+Purple Navy: #435781 RGB: 67, 87, 129
+White: white RGB: 255, 255, 255
+Deep Saffron: #F9A03F RGB: 249, 160, 63
+Blood Red: #6B0504 RGB: 107, 5, 4
+Orange Red Crayola: #FE5F55 RGB: 254, 95, 85
+
+*/
+
 body {
-  background: green;
+  background: #435781;
 }
 
 .flexThisBox {
@@ -13,13 +26,14 @@ main {
 }
 
 footer {
-  background: gold;
+  background: rgba(107, 5, 4, 0.5);
   min-height: 50px;
   margin-top: 2rem;
 }
 
 header {
-  background: rgba(220, 220, 220, 0.5);
+  background: rgba(67, 87, 129, 0.5);
+  background-color: 0.5;
   margin-bottom: 1.45rem;
   padding: 1.45rem 3rem;
 }
@@ -32,4 +46,30 @@ header {
 .nav {
   display: flex;
   flex: 1;
+}
+
+/* Index Page CSS */
+
+.frontBanner {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* padding: 20vh; */
+}
+
+.blackOverlay {
+  display: -webkit-flex; /* Safari */
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  justify-content: center;
+  align-items: left;
+  padding: 20vh;
+}
+
+.bannerText {
+  color: #f9a03f;
 }
