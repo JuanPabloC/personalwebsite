@@ -11,7 +11,7 @@ const IndexPage = (props) => (
   <Layout>
     <SEO title="Home" />
     <BackgroundImage
-      className="frontBanner"
+      className= "frontBanner"
       fluid={props.data.indexImage.childImageSharp.fluid}
     >
       <div

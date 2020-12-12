@@ -11,10 +11,6 @@ Orange Red Crayola: #FE5F55 RGB: 254, 95, 85
 
 */
 
-body {
-  background: #435781;
-}
-
 .flexThisBox {
   display: flex;
   flex-direction: column;
@@ -22,20 +18,24 @@ body {
 }
 
 main {
+  background: #435781;
   flex: 1 0 auto;
 }
 
 footer {
   background: rgba(107, 5, 4, 0.5);
   min-height: 50px;
-  margin-top: 2rem;
 }
 
+/* header css */
+
 header {
-  background: rgba(67, 87, 129, 0.5);
+  background: rgba(67, 87, 129, 0);
   background-color: 0.5;
-  margin-bottom: 1.45rem;
   padding: 1.45rem 3rem;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
 }
 
 .navItem {
