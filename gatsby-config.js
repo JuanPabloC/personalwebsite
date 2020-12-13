@@ -6,16 +6,25 @@ module.exports = {
     menuLinks: [
       {
         name: `About Me`,
-        link: `/about`
+        link: `/`
       },
       {
         name: `Resume`,
-        link:  `/resume`
+        link:  `/`
+      },
+      {
+        name: `Skills`,
+        link: `/`
       },
       {
         name: `Awards`,
-        link: `/awards`
-      }
+        link: `/`
+      },
+      {
+        name: `Endorsements`,
+        link: `/`
+      },
+
     ]
   },
   plugins: [
