@@ -5,7 +5,7 @@ import React from "react"
 const Header = ({ siteTitle, menuLinks }) => (
   <header>
     <h1 style={{ margin: 0 }} className="logo"> Juan Pablo Castano</h1>
-    {/* <ul className="nav">
+    <ul className="nav">
       {menuLinks.map(link => (
         <li
           key={link.name}
@@ -16,7 +16,7 @@ const Header = ({ siteTitle, menuLinks }) => (
           </Link>
         </li>
       ))}
-    </ul> */}
+    </ul>
   </header>
 )
 

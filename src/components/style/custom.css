@@ -15,6 +15,7 @@ Orange Red Crayola: #FE5F55 RGB: 254, 95, 85
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background: #435781;
 }
 
 main {
@@ -32,10 +33,15 @@ footer {
 header {
   /* background: rgba(67, 87, 129, 0); */
   background: #fe5f55;
-  padding: 1.45rem 3rem;
+  /* padding: 1.45rem 3rem; */
   display: flex;
   flex-direction: row;
-  align-content: center;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 5em;
+  padding-right: 5em;
+  padding-top: 1em;
+  padding-bottom: 1em;
 }
 
 .logo {
@@ -43,14 +49,37 @@ header {
   font-weight: 300;
 }
 
-.navItem {
-  list-style-type: none;
-  padding: 1rem;
-}
-
 .nav {
   display: flex;
-  flex: 1;
+  flex-direction: row;
+  list-style: none;
+  text-transform: uppercase;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+
+  /* align-items: right; */
+  /* flex: 1; */
+}
+
+.nav a {
+  text-decoration: none;
+}
+
+.navItem {
+  display: block;
+  padding: 1em;
+  margin: 0;
+  font-family: "Roboto Slab";
+  font-weight: 300;
+  background: rgba(255, 255, 255, 0);
+
+  /* list-style-type: none;
+  padding: 1rem; */
+}
+
+.navItem:hover {
+  background: rgba(255, 255, 255, 0.3);
 }
 
 /* Index Page CSS */
