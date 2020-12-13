@@ -4,7 +4,7 @@ import React from "react"
 
 const Header = ({ siteTitle, menuLinks }) => (
   <header>
-    <h1 style={{ margin: 0 }}> Juan Pablo Castano</h1>
+    <h1 style={{ margin: 0 }} className="logo"> Juan Pablo Castano</h1>
     {/* <ul className="nav">
       {menuLinks.map(link => (
         <li
