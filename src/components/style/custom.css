@@ -87,8 +87,8 @@ footer {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding-left: 5em;
-  padding-right: 5em;
+  padding-left: 4em;
+  padding-right: 4em;
   padding-top: 1em;
   padding-bottom: 1em;
 }
@@ -111,6 +111,10 @@ footer {
   text-decoration: none;
   font-family: "Roboto Slab";
   font-weight: 300;
+}
+
+.socialsList li a:hover {
+  opacity: 0.7;
 }
 
 /* Index Page CSS */

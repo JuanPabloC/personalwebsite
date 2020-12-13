@@ -34,6 +34,13 @@ const Footer = () => {
           }
         }
       }
+      emailImage: file(relativePath: {eq: "logos/email.png"}) {
+        childImageSharp {
+          fixed(width: 50, height: 50) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
     }
   `);
 
@@ -48,22 +55,27 @@ const Footer = () => {
           <ul className="socialsList">
             <li key="Instagram" className="socialsItem">
               <a href="https://www.instagram.com/juanpablocastano/" target="_blank" rel="noopener noreferrer">
-                <Img fixed={images.instagramImage.childImageSharp.fixed} />
+                <Img fixed={images.instagramImage.childImageSharp.fixed} alt="Instagram" />
               </a>
             </li>
             <li key="LinkedIn" className="socialsItem">
               <a href="http://www.linkedin.com/in/jpcastanom/" target="_blank" rel="noopener noreferrer">
-              <Img fixed={images.linkedinImage.childImageSharp.fixed} />
+                <Img fixed={images.linkedinImage.childImageSharp.fixed} alt="LinkedIn"/>
               </a>
             </li>
             <li key="GitHub" className="socialsItem">
               <a href="https://github.com/JuanPabloC" target="_blank" rel="noopener noreferrer">
-              <Img fixed={images.githubImage.childImageSharp.fixed} />
+                <Img fixed={images.githubImage.childImageSharp.fixed} alt="GitHub"/>
               </a>
             </li>
             <li key="Facebook" className="socialsItem">
               <a href="https://www.facebook.com/JPCastanoMoreno/" target="_blank" rel="noopener noreferrer">
-              <Img fixed={images.facebookImage.childImageSharp.fixed} />
+                <Img fixed={images.facebookImage.childImageSharp.fixed} alt="Facebook"/>
+              </a>
+            </li>
+            <li key="Email" className="socialsItem">
+              <a href="mailto:jpcastanom@gmail.com" target="_blank" rel="noopener noreferrer">
+                <Img fixed={images.emailImage.childImageSharp.fixed} alt="Email"/>
               </a>
             </li>
           </ul>
