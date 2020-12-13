@@ -6,23 +6,23 @@ module.exports = {
     menuLinks: [
       {
         name: `About Me`,
-        link: `/`
+        link: `/aboutme`
       },
       {
         name: `Resume`,
-        link:  `/`
+        link:  `/resume`
       },
       {
         name: `Skills`,
-        link: `/`
+        link: `/skills`
       },
       {
         name: `Awards`,
-        link: `/`
+        link: `/awards`
       },
       {
         name: `Endorsements`,
-        link: `/`
+        link: `/endorsements`
       },
 
     ]
