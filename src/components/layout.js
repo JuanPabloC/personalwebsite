@@ -34,7 +34,8 @@ const Layout = ({ children }) => {
       className="flexThisBox"
     >
       <Header menuLinks={data.site.siteMetadata.menuLinks} 
-            siteTitle={data.site.siteMetadata?.title || `Title`} />
+            siteTitle={data.site.siteMetadata?.title || `Title`} 
+            className="shadow"/>
       <main>{children}</main>
       <Footer/>
     </div>
