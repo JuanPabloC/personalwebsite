@@ -42,8 +42,8 @@ header {
 
   padding-left: 5em;
   padding-right: 5em;
-  padding-top: 1em;
-  padding-bottom: 1em;
+  padding-top: 12px;
+  padding-bottom: 12px;
   -webkit-box-shadow: 0 0.2rem 0.25rem rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0 0.2rem 0.25rem rgba(0, 0, 0, 0.2);
   box-shadow: 0 0.2rem 0.25rem rgba(0, 0, 0, 0.2);
@@ -52,10 +52,18 @@ header {
 .logo {
   font-family: "Roboto Slab";
   font-weight: 300;
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  text-transform: uppercase;
+  justify-content: center;
+  align-items: center;
 }
 
 .logo a {
   text-decoration: none;
+  padding: 3px;
+  margin: 0;
 }
 
 .nav {
@@ -73,16 +81,15 @@ header {
 
 .nav a {
   text-decoration: none;
+  color: #6b0504;
 }
 
 .navItem {
-  display: block;
   padding: 1em;
   margin: 0;
   font-family: "Roboto Slab";
   font-weight: 400;
   border-radius: 15px;
-
   /* list-style-type: none;
   padding: 1rem; */
 }
@@ -177,5 +184,5 @@ footer {
 
 .underConstruction h1,
 .underConstruction p {
-  color: #ffed66;
+  color: #6b0504;
 }

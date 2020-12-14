@@ -1,0 +1,15 @@
+<svg width="580" height="580" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="582" width="582" y="-1" x="-1"/>
+  <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+   <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+  </g>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <ellipse stroke="#000" ry="285" rx="285" id="svg_1" cy="290.000003" cx="289.999994" stroke-width="0" fill="#6b0504"/>
+  <text stroke="#000" transform="matrix(15.009716546434701,0,0,14.239960354552336,-1781.3454746452185,-2176.745057488903) " xml:space="preserve" text-anchor="start" font-family="Oswald, sans-serif" font-size="24" id="svg_3" y="181.520545" x="123.994971" stroke-opacity="null" stroke-width="0" fill="#ffffff">JP</text>
+ </g>
+</svg>

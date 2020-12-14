@@ -1,28 +1,46 @@
-import { Link } from "gatsby"
+import { Link, useStaticQuery } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import Img from "gatsby-image"
 
-const Header = ({ menuLinks }) => (
-  <header>
+const Header = ({ menuLinks }) => {
+  const logoq = useStaticQuery(graphql`
+    query {
+      logo: file(relativePath: {eq: "logos/logo_blood_red.png"}) {
+        childImageSharp {
+          fixed(width: 60, height: 60) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+    }
+  `);
+
+  return (
+    <header>
       <h1 style={{ margin: 0 }} className="logo"> 
-        <Link style={{ color: `black` }} to={"/"}>
-          JPCastano
+        <Link to={"/"}>
+          <Img fixed={logoq.logo.childImageSharp.fixed} alt="JP" />
+        </Link>
+        <Link style={{ color: `black`, paddingBottom:8 }} to={"/"}>
+          Castano
         </Link>
       </h1>
-    <ul className="nav">
-      {menuLinks.map(link => (
-        <li
-          key={link.name}
-          className="navItem"
-        >
-          <Link style={{ color: `black` }} to={link.link}>
-            {link.name}
-          </Link>
-        </li>
-      ))}
-    </ul>
-  </header>
-)
+      <ul className="nav">
+        {menuLinks.map(link => (
+          <li
+            key={link.name}
+            className="navItem"
+          >
+            <Link to={link.link}>
+              {link.name}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </header>
+  )
+}
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
