@@ -6,7 +6,7 @@ const Header = ({ menuLinks }) => (
   <header>
       <h1 style={{ margin: 0 }} className="logo"> 
         <Link style={{ color: `black` }} to={"/"}>
-          Juan Pablo Castano
+          JPCastano
         </Link>
       </h1>
     <ul className="nav">
