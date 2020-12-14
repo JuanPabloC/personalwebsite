@@ -49,11 +49,8 @@ module.exports = {
         display: `minimal-ui`,
         icon: `src/images/logos/logo_blood_red.png`, // This path is relative to the root of the site.
       },
-      
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    'gatsby-plugin-antd',
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
@@ -64,5 +61,8 @@ module.exports = {
         display: 'swap'
       }
     }
+    // this (optional) plugin enables Progressive Web App + Offline functionality
+    // To learn more, visit: https://gatsby.dev/offline
+    // `gatsby-plugin-offline`,
   ],
 }
