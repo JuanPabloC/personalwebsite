@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "@emotion/styled"
 
-const UnderConstructionComp = style("div")`
+const UnderConstructionComp = styled("div")`
   display: -webkit-flex; /* Safari */
   display: flex;
   flex-direction: column;
