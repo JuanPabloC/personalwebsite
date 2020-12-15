@@ -1,4 +1,6 @@
 import React from "react"
+import styled from "@emotion/styled"
+// import { css } from "@emotion/react"
 import BackgroundImage from "gatsby-background-image"
 
 import { graphql } from "gatsby"
@@ -6,21 +8,41 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
+const BannerHeading = styled("h1")`
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 3.5rem;
+`;
+
+const BlackOverlay = styled("div")`
+  width: 100%;
+  height: 80vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: -webkit-flex; /* Safari */
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.4);
+  justify-content: center;
+  align-items: left;
+  padding: 15vh;
+`;
+
 const IndexPage = (props) => {
 
   return (
     <Layout>
       <SEO title="Home" />
       <BackgroundImage
-        className= "frontBanner"
         fluid={props.data.indexImage.childImageSharp.fluid}
       >
-        <div
-          className="blackOverlay"
-        >
-          <h1 className="bannerText">Hi, Welcome!</h1>
-          <h1 className="bannerText">My name is Juan Pablo</h1>
-        </div>
+        <BlackOverlay>
+          <BannerHeading>Hi, Welcome!</BannerHeading>
+          <BannerHeading>My name is Juan Pablo</BannerHeading>
+        </BlackOverlay>
       </BackgroundImage>
     </Layout>
   )
