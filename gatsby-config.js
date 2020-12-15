@@ -51,6 +51,7 @@ module.exports = {
       },
     },
     'gatsby-plugin-antd',
+    `gatsby-plugin-emotion`,
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
