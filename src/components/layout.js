@@ -8,6 +8,8 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import BackgroundImage from "gatsby-background-image"
+
 
 import Header from "./header"
 import Footer from "./footer"
@@ -26,19 +28,28 @@ const Layout = ({ children }) => {
           }
         }
       }
+      background: file(relativePath: {eq: "backgroundimage.png"}) {
+        childImageSharp {
+          fluid(maxHeight: 2400) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      } 
     }
   `)
 
   return (
-    <div 
-      className="flexThisBox"
-    >
+    <BackgroundImage
+        fluid={data.background.childImageSharp.fluid}
+        className="flexThisBox"
+      >
       <Header menuLinks={data.site.siteMetadata.menuLinks} 
             siteTitle={data.site.siteMetadata?.title || `Title`} 
             className="shadow"/>
       <main>{children}</main>
       <Footer/>
-    </div>
+    </BackgroundImage>
+      
   )
 }
 
