@@ -12,6 +12,13 @@ Charcoal: #394053
 
 */
 
+:root {
+  --dune: #312b28;
+  --soft-amber: #cec0b7;
+  --dawn: #a09e9c;
+  --lynch: #6e809c;
+}
+
 .flexThisBox {
   display: flex;
   flex-direction: column;
