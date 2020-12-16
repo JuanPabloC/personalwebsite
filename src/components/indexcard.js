@@ -7,7 +7,7 @@ import { Col, Divider, Row } from "antd"
 
 const Container = styled("div")`
     width: 100%;
-    padding: 15px;
+    padding: 45px;
 `; 
 
 const Card =  styled("div")`
@@ -35,9 +35,9 @@ const CardHeading = styled("div")`
     padding: 10px 0;
 `;
 
-// const CardParagraph = styled("p")`
-//     text-size: 20px;
-// `;
+const Paragraph = styled("div")`
+    text-size: 20px;
+`;
 
 const imgedit = css`
     margin: 0;
@@ -45,9 +45,6 @@ const imgedit = css`
     border-radius: 25px;    
 `;
 
-const largetext = css`
-    text-size: 20px!important;
-`;
 
 
 const IndexCard = ({img, text, title}) => {
@@ -65,7 +62,12 @@ const IndexCard = ({img, text, title}) => {
                     </Col>
                     <Col span={16}>
                         <CardText>
-                            <p css={largetext}>{text}</p>
+                        {text.map(par => (
+                            <div>
+                                <Paragraph>{par}</Paragraph>
+                                <p/>
+                            </div>
+                        ))}
                         </CardText>
                     </Col>
                 </Row>
