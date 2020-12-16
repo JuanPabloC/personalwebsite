@@ -7,7 +7,7 @@ import { Col, Divider, Row } from "antd"
 
 const Container = styled("div")`
     width: 100%;
-    padding: 45px;
+    padding: 20px 45px;
 `; 
 
 const Card =  styled("div")`
@@ -28,17 +28,14 @@ const ImgBox = styled("div")`
 
 const CardText = styled("div")`
     height: 100%;
-    margin: auto;
-    padding: 20px;
     text-align: left;
-`;
-
-const CardHeading = styled("div")`
-    padding: 10px 0;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 40px;
 `;
 
 const Paragraph = styled("div")`
-    text-size: 20px;
+    text-size: 40px;
 `;
 
 const imgedit = css`
@@ -47,29 +44,26 @@ const imgedit = css`
     border-radius: 25px;    
 `;
 
-
-
 const IndexCard = ({img, text, title}) => {
     return (
         <Container>
             <Card>
-                <CardHeading>
-                    <Divider orientation="right"><h2>{title}</h2></Divider>
-                </CardHeading>
-                <Row align={"middle"}>
-                    <Col span={8}>
+                <Row>
+                    <Col span={8}> {/* Image */}
                         <ImgBox>
                             <Img fluid={img} alt="Image" css={imgedit}/>
                         </ImgBox>
                     </Col>
-                    <Col span={16}>
+                    <Col span={16}> {/* Text */}
                         <CardText>
-                        {text.map(par => (
-                            <div>
-                                <Paragraph>{par}</Paragraph>
-                                <p/>
-                            </div>
-                        ))}
+                            <Divider style={{borderWidth: 1, borderColor: 'var(--lynch)' }} orientation="right"><h2>{title}</h2></Divider>
+
+                            {text.map(par => (
+                                <div>
+                                    <Paragraph>{par}</Paragraph>
+                                    <p/>
+                                </div>
+                            ))}
                         </CardText>
                     </Col>
                 </Row>
