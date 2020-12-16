@@ -55,7 +55,7 @@ const IndexPage = (props) => {
           <BannerHeading>My name is Juan Pablo</BannerHeading>
         </BlackOverlay>
       </BackgroundImage>
-      <IndexCard img={props.data.firstCardImg.childImageSharp.fluid} text={aboutmetext} title="About Me"/>
+      <IndexCard img={props.data.firstCardImg.childImageSharp.fluid} text={aboutmetext} title="About Me" imgPosition="left"/>
     </Layout>
   )
 }

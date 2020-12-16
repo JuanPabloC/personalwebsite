@@ -1,4 +1,5 @@
 import React from "react"
+import PropTypes from "prop-types"
 import styled from "@emotion/styled"
 import { css } from "@emotion/react"
 import Img from "gatsby-image"
@@ -44,21 +45,21 @@ const imgedit = css`
     border-radius: 25px;    
 `;
 
-const IndexCard = ({img, text, title}) => {
+const getOrderLeft = (props) => {
     return (
         <Container>
             <Card>
                 <Row>
                     <Col span={8}> {/* Image */}
                         <ImgBox>
-                            <Img fluid={img} alt="Image" css={imgedit}/>
+                            <Img fluid={props.img} alt="Image" css={imgedit}/>
                         </ImgBox>
                     </Col>
                     <Col span={16}> {/* Text */}
                         <CardText>
-                            <Divider style={{borderWidth: 1, borderColor: 'var(--lynch)' }} orientation="right"><h2>{title}</h2></Divider>
+                            <Divider style={{borderWidth: 1, borderColor: 'var(--lynch)' }} orientation="right"><h2>{props.title}</h2></Divider>
 
-                            {text.map(par => (
+                            {props.text.map(par => (
                                 <div>
                                     <Paragraph>{par}</Paragraph>
                                     <p/>
@@ -70,7 +71,55 @@ const IndexCard = ({img, text, title}) => {
             </Card>
         </Container>
     )
+};
+
+const getOrderRight = (props) => {
+    return (
+        <Container>
+            <Card>
+                <Row>
+                    <Col span={16}> {/* Text */}
+                        <CardText>
+                            <Divider style={{borderWidth: 1, borderColor: 'var(--lynch)' }} orientation="left"><h2>{props.title}</h2></Divider>
+                            {props.text.map(par => (
+                                <div>
+                                    <Paragraph>{par}</Paragraph>
+                                    <p/>
+                                </div>
+                            ))}
+                        </CardText>
+                    </Col>
+                    <Col span={8}> {/* Image */}
+                        <ImgBox>
+                            <Img fluid={props.img} alt="Image" css={imgedit}/>
+                        </ImgBox>
+                    </Col>
+                </Row>
+            </Card>
+        </Container>
+    )
+};
+
+
+
+const IndexCard = ({img, text, title, imgPosition}) => {
+    if (imgPosition === "right") return getOrderRight({img,text,title})
+    else return getOrderLeft({img,text,title});
 }
 
+IndexCard.propTypes = {
+    text: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.object
+    ]),
+    img: PropTypes.object.isRequired,
+    title: PropTypes.string,
+    imgPosition: PropTypes.oneOf(['right', 'left']),
+}
+
+IndexCard.defaultProps = {
+    imgPosition: `left`
+}
 
 export default IndexCard
+
