@@ -39,16 +39,18 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <BackgroundImage
-        fluid={data.background.childImageSharp.fluid}
-        className="flexThisBox"
-      >
+    // <BackgroundImage
+    //     fluid={data.background.childImageSharp.fluid}
+    //     className="flexThisBox"
+    //   >
+    <div>
       <Header menuLinks={data.site.siteMetadata.menuLinks} 
             siteTitle={data.site.siteMetadata?.title || `Title`} 
             className="shadow"/>
       <main>{children}</main>
       <Footer/>
-    </BackgroundImage>
+    </div>
+    // </BackgroundImage>
       
   )
 }
