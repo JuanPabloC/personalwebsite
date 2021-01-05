@@ -75,7 +75,7 @@ header {
   display: flex;
   flex-direction: row;
   list-style: none;
-  text-transform: uppercase;
+  text-transform: lowercase;
   justify-content: center;
   align-items: center;
   margin: 0;
@@ -94,6 +94,7 @@ header {
   margin: 0;
   font-family: "Roboto Slab";
   font-weight: 400;
+  font-size: 20px;
   border-radius: 15px;
   /* list-style-type: none;
   padding: 1rem; */
@@ -101,6 +102,10 @@ header {
 
 .navItem:hover {
   background: rgba(0, 0, 0, 0.1);
+}
+
+.navItem a:hover {
+  color: #6b0504;
 }
 
 /* Footer CSS */
