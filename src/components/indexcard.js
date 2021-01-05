@@ -8,7 +8,7 @@ import { Col, Divider, Row } from "antd"
 
 const Container = styled("div")`
     width: 100%;
-    padding: 20px 45px;
+    padding: 0 45px;
 `; 
 
 const Card =  styled("div")`
@@ -18,7 +18,6 @@ const Card =  styled("div")`
     background: var(--off-white);
     border-radius: 20px;
 `;
-
 
 const ImgBox = styled("div")`
     width: 70%;
