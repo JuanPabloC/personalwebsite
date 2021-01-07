@@ -15,7 +15,7 @@ const Card =  styled("div")`
     margin: 30px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     padding: 50px;
-    background: var(--off-white);
+    background: white;
     border-radius: 20px;
 `;
 
