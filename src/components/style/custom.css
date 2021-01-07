@@ -27,6 +27,8 @@ Charcoal: #394053
 
 main {
   padding: 1rem 0;
+  background: #f3f2f0;
+  min-height: 76vh;
 }
 
 .shadow {
@@ -39,6 +41,7 @@ main {
 
 header {
   background: white;
+  height: 12vh;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -111,7 +114,7 @@ header {
 /* Footer CSS */
 
 footer {
-  min-height: 5rem;
+  height: 12vh;
   background: white;
 
   display: flex;
