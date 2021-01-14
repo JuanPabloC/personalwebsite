@@ -26,20 +26,31 @@ const Title =styled("h1")`
   font-size: 2.5rem;
 `;
 
+const RoundDivider=styled("hr")`
+  border-top: 3px solid #bbb;
+  border-radius: 5px;
+`;
+
+const DashedDiver=styled("hr")`
+  border-top: 1px dashed #bbb;
+`;
 
 const Resume = (props) => (
   <Layout>
     <SEO title="Resume" />
     <Container>
       <Title>Juan Pablo Castano</Title>
-      <Divider/>
+      <RoundDivider/>
       <ResumeSection title={"Education"}/>
       <ResumeItem image={props.data.uofr.childImageSharp.fluid} org={education.uofr}/>
-      <Divider/>
+      <RoundDivider/>
       <ResumeSection title={"Experience"}></ResumeSection>
       <ResumeItem image={props.data.codeclimate.childImageSharp.fluid} org={resumeJobs.codeclimate}></ResumeItem>
+      <DashedDiver/>
       <ResumeItem image={props.data.geometrica.childImageSharp.fluid} org={resumeJobs.geometrica}></ResumeItem>
+      <DashedDiver/>
       <ResumeItem image={props.data.uofr.childImageSharp.fluid} org={resumeJobs.uofr}></ResumeItem>
+      <DashedDiver/>
       <Divider/>
     </Container>
   </Layout>
