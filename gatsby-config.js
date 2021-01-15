@@ -16,14 +16,14 @@ module.exports = {
         name: `Skills`,
         link: `/skills`
       },
-      {
-        name: `Awards`,
-        link: `/awards`
-      },
-      {
-        name: `Endorsements`,
-        link: `/endorsements`
-      }
+      // {
+      //   name: `Awards`,
+      //   link: `/awards`
+      // },
+      // {
+      //   name: `Endorsements`,
+      //   link: `/endorsements`
+      // }
     ]
   },
   plugins: [
