@@ -7,7 +7,6 @@ import ResumeItem from "../components/resumeitem"
 import SEO from "../components/seo"
 
 import styled from "@emotion/styled"
-import {Divider} from "antd"
 
 const Container = styled("div")`
   margin: 0px 60px;
@@ -51,7 +50,6 @@ const Resume = (props) => (
       <DashedDiver/>
       <ResumeItem image={props.data.uofr.childImageSharp.fluid} org={resumeJobs.uofr}></ResumeItem>
       <DashedDiver/>
-      <Divider/>
     </Container>
   </Layout>
 )
