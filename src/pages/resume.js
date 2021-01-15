@@ -89,7 +89,7 @@ let resumeJobs = {
     name: "Code Climate",
     location: "New York, NY",
     date: "Sept. 2018 - Oct. 2020",
-    description: "Code Climate’s flagship product, Velocity, analyzes all the data from your GitHub repos and provides you with heads-up displays, real-time analytics, and custom reports to give you a clearer perspective on how your engineering team is working.",
+    description: "Code Climate’s flagship product, Velocity, analyzes all the data from your GitHub repos and provides you with heads-up displays, real-time analytics, and custom reports to give you a clearer perspective on how your engineering team is working. \n\nNo more tedious hours scouring Github, scanning JIRA tickets, or pinging developers. With instant access to your team’s progress, blockers, and reports, you always have everything you need to make confident, data-informed decisions. Spend less time surfacing issues, and more time solving them.",
     roles: [
       "Outbound Business Development Representative",
       "Associate Account Executive",
