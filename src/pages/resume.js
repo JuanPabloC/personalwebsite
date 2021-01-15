@@ -3,6 +3,7 @@ import { graphql } from 'gatsby'
 import Layout from "../components/layout"
 import ResumeSection from "../components/resumesection"
 import ResumeItem from "../components/resumeitem"
+import ResumeEducationItem from "../components/resumeeducationitem"
 import SEO from "../components/seo"
 import styled from "@emotion/styled"
 
@@ -39,7 +40,7 @@ const Resume = (props) => (
       <Title>Juan Pablo Castano</Title>
       <RoundDivider/>
       <ResumeSection title={"Education"}/>
-      <ResumeItem image={props.data.uofr.childImageSharp.fluid} org={education.uofr}/>
+      <ResumeEducationItem image={props.data.uofr.childImageSharp.fluid} org={education.uofr}/>
       <RoundDivider/>
       <ResumeSection title={"Experience"}></ResumeSection>
       <ResumeItem image={props.data.codeclimate.childImageSharp.fluid} org={resumeJobs.codeclimate}></ResumeItem>
@@ -185,7 +186,8 @@ let education = {
     name: "University of Rochester",
     location: "Rochester, NY",
     date: "Aug. 2014 - May 2018",
-    description: "",
-    roles: []
+    degree: "BS Computer Science with Minor in Business, Class of 2018",
+    scholarships: "Scholarships: Dean's Scholarship",
+    studyabroad: "Study Abroad Program: University of Bristol (UK)",
   }
 }
