@@ -42,10 +42,18 @@ const bottomMargin = css`
     margin-bottom: 20px;
 `;
 
+const respList = (resps) => (
+
+    <ul>
+        {resps.map((resp, index) => (
+          <li key={index}>{resp}</li>
+        ))}
+    </ul>
+)
 
 const ResumeItem = (props) => {
 
-    console.log(JSON.stringify(props.org.roles))
+    console.log(JSON.stringify(props))
 
     return (
         <Row css={bottomMargin}>
@@ -62,7 +70,10 @@ const ResumeItem = (props) => {
                 <p style={{whiteSpace: 'pre-wrap'}}>{props.org.description}</p>
                 <Collapse>
                     {props.org.roles.map((role,index) => (
-                        <Panel header={role} key={index+1} forceRender="true"></Panel>
+                        <Panel header={role.title} key={index+1} forceRender="true">
+                            <h5 style={{marginBottom: 15}}>Key Responsibilities and Achievements:</h5>
+                            {respList(role.responsibilities)}
+                        </Panel>
                     ))}
                 </Collapse>
             </Col>
