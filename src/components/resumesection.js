@@ -12,6 +12,7 @@ const items = {
 
 const SectionTitle = styled("h2")`
     margin-bottom: 0.7em;
+    color: rgb(108,5,3);
 `;
 
 const Section =  styled("div")`

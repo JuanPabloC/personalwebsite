@@ -15,7 +15,7 @@ const ImgBox = styled("div")`
 `;
 
 const imgedit = css`
-    width: 85%;
+    width: 100%;
 `;
 
 const ResumeItemHeading = styled("div")`
@@ -59,7 +59,7 @@ const ResumeItem = (props) => {
                     <ResumeItemTitle>{props.org.name}</ResumeItemTitle>
                     <ResumeItemLocation>{props.org.location}</ResumeItemLocation>
                 </ResumeItemHeading>
-                <p>{props.org.description}</p>
+                <p style={{whiteSpace: 'pre-wrap'}}>{props.org.description}</p>
                 <Collapse>
                     {props.org.roles.map((role,index) => (
                         <Panel header={role} key={index+1} forceRender="true"></Panel>
