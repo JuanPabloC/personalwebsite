@@ -16,6 +16,10 @@ const ImgBox = styled("div")`
 
 const imgedit = css`
     width: 100%;
+
+    &:hover {
+        opacity: 0.8;
+    }
 `;
 
 const ResumeItemHeading = styled("div")`
@@ -30,6 +34,10 @@ const ResumeItemLocation = styled("h4")`
 
 const ResumeItemTitle = styled("h4")`
     font-weight: bold;
+
+    &:hover {
+        color: grey;
+    }
 `;
 
 const ResumeItemDate = styled("h4")`
@@ -59,12 +67,16 @@ const ResumeItem = (props) => {
         <Row css={bottomMargin}>
             <Col span={3}>
                 <ImgBox>
-                    <Img fluid={props.image} css={imgedit}/>
+                    <a href={props.org.url} target="_blank" rel="noopener noreferrer">
+                        <Img fluid={props.image} css={imgedit}/>
+                    </a>
                 </ImgBox>
             </Col>
             <Col span={15}>
                 <ResumeItemHeading>
-                    <ResumeItemTitle>{props.org.name}</ResumeItemTitle>
+                    <a href={props.org.url} target="_blank" rel="noopener noreferrer">
+                        <ResumeItemTitle>{props.org.name}</ResumeItemTitle>
+                    </a>
                     <ResumeItemLocation>{props.org.location}</ResumeItemLocation>
                 </ResumeItemHeading>
                 <p style={{whiteSpace: 'pre-wrap'}}>{props.org.description}</p>
