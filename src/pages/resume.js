@@ -1,11 +1,9 @@
 import React from "react"
-
+import { graphql } from 'gatsby'
 import Layout from "../components/layout"
 import ResumeSection from "../components/resumesection"
 import ResumeItem from "../components/resumeitem"
-
 import SEO from "../components/seo"
-
 import styled from "@emotion/styled"
 
 const Container = styled("div")`
