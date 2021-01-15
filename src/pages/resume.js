@@ -4,6 +4,7 @@ import Layout from "../components/layout"
 import ResumeSection from "../components/resumesection"
 import ResumeItem from "../components/resumeitem"
 import ResumeEducationItem from "../components/resumeeducationitem"
+import ResumeProjectsItem from "../components/resumeprojectsitem"
 import SEO from "../components/seo"
 import styled from "@emotion/styled"
 
@@ -48,6 +49,15 @@ const Resume = (props) => (
       <ResumeItem image={props.data.geometrica.childImageSharp.fluid} org={resumeJobs.geometrica}></ResumeItem>
       <DashedDiver/>
       <ResumeItem image={props.data.uofr.childImageSharp.fluid} org={resumeJobs.uofr}></ResumeItem>
+      <RoundDivider/>
+      <ResumeSection title={"Projects"}/>
+      <ResumeProjectsItem project={projects.personalwebsite}/>
+      <DashedDiver/>
+      <ResumeProjectsItem project={projects.facerecognitionbrain}/>
+      <DashedDiver/>
+      <ResumeProjectsItem project={projects.memefeed}/>
+      <DashedDiver/>
+      <ResumeProjectsItem project={projects.spaceexplore}/>
       <DashedDiver/>
     </Container>
   </Layout>
@@ -190,4 +200,52 @@ let education = {
     scholarships: "Scholarships: Dean's Scholarship",
     studyabroad: "Study Abroad Program: University of Bristol (UK)",
   }
+}
+
+let projects = {
+  personalwebsite: {
+    title: "My Personal Website",
+    date: "2020-2021",
+    description: "",
+    languages: [
+      
+    ],
+    skills: [
+
+    ]
+  },
+  facerecognitionbrain: {
+    title: "Face Recognition Brain",
+    date: "2018",
+    description: "Final project for Full-Stack Web-Development online course",
+    languages: [
+      
+    ],
+    skills: [
+
+    ]
+  },
+  memefeed: {
+    title: "MemeFeed",
+    date: "2018",
+    description: "Final project for Human-Interaction course that used crawlers to gather content from various pages including YouTube and Reddit, and consolidated it in a single feed.",
+    languages: [
+      
+    ],
+    skills: [
+
+    ]
+  },
+  spaceexplore: {
+    title: "SpaceExplore",
+    date: "2017",
+    description: "Pair-programmed webapplication for Web Technologies course using XHTML, CSS, Javascript and SQLite.",
+    languages: [
+      
+    ],
+    skills: [
+
+    ]
+  }
+
 }
