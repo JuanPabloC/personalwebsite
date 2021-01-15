@@ -56,8 +56,8 @@ const IndexPage = (props) => {
         </BlackOverlay>
       </BackgroundImage>
       <IndexCard img={props.data.firstCardImg.childImageSharp.fluid} text={aboutmetext} title="About Me" imgPosition="left"/>
-      <IndexCard img={props.data.firstCardImg.childImageSharp.fluid} text={aboutmetext} title="Values" imgPosition="right"/>
-      <IndexCard img={props.data.firstCardImg.childImageSharp.fluid} text={aboutmetext} title="What Now" imgPosition="left"/>
+      {/* <IndexCard img={props.data.firstCardImg.childImageSharp.fluid} text={aboutmetext} title="Values" imgPosition="right"/>
+      <IndexCard img={props.data.firstCardImg.childImageSharp.fluid} text={aboutmetext} title="What Now" imgPosition="left"/> */}
     </Layout>
   )
 }

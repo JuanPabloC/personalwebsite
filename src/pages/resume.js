@@ -38,9 +38,9 @@ const Resume = (props) => (
     <Container>
       <Title>Juan Pablo Castano</Title>
       <RoundDivider/>
-      <ResumeSection title={"Education"}/>
+      {/* <ResumeSection title={"Education"}/>
       <ResumeItem image={props.data.uofr.childImageSharp.fluid} org={education.uofr}/>
-      <RoundDivider/>
+      <RoundDivider/> */}
       <ResumeSection title={"Experience"}></ResumeSection>
       <ResumeItem image={props.data.codeclimate.childImageSharp.fluid} org={resumeJobs.codeclimate}></ResumeItem>
       <DashedDiver/>

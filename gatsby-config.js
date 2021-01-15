@@ -11,20 +11,20 @@ module.exports = {
       {
         name: `Resume`,
         link:  `/resume`
-      },
-      {
-        name: `Skills`,
-        link: `/skills`
-      },
-      {
-        name: `Awards`,
-        link: `/awards`
-      },
-      {
-        name: `Endorsements`,
-        link: `/endorsements`
-      },
-
+      }
+      // },
+      // {
+      //   name: `Skills`,
+      //   link: `/skills`
+      // },
+      // {
+      //   name: `Awards`,
+      //   link: `/awards`
+      // },
+      // {
+      //   name: `Endorsements`,
+      //   link: `/endorsements`
+      // }
     ]
   },
   plugins: [
