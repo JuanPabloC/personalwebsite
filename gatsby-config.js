@@ -11,12 +11,11 @@ module.exports = {
       {
         name: `Resume`,
         link:  `/resume`
-      }
-      // },
-      // {
-      //   name: `Skills`,
-      //   link: `/skills`
-      // },
+      },
+      {
+        name: `Skills`,
+        link: `/skills`
+      },
       // {
       //   name: `Awards`,
       //   link: `/awards`
