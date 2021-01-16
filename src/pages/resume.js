@@ -4,11 +4,12 @@ import Layout from "../components/layout"
 import ResumeSection from "../components/resumesection"
 import ResumeItem from "../components/resumeitem"
 import ResumeEducationItem from "../components/resumeeducationitem"
+import Banner from "../components/banner"
 import SEO from "../components/seo"
 import styled from "@emotion/styled"
 
 const Container = styled("div")`
-  margin: 0px 60px;
+  margin: 20px 60px 0px 60px;
   padding: 30px 60px;
   background: white;
   border-radius: 20px;
@@ -36,6 +37,7 @@ const DashedDiver=styled("hr")`
 const Resume = (props) => (
   <Layout>
     <SEO title="Resume" />
+    <Banner img={props.data.manhattan} text="My Resume" size="small"></Banner>
     <Container>
       <Title>Juan Pablo Castano</Title>
       <RoundDivider/>
@@ -78,6 +80,13 @@ export const pageQuery = graphql`
         }
       }
     },
+    manhattan: file(relativePath: {eq: "manhattan.jpg"}) {
+      childImageSharp {
+        fluid(maxWidth: 1800) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
   }
 `;
 
