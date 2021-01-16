@@ -58,7 +58,6 @@ const Resume = (props) => (
       <ResumeProjectsItem project={projects.memefeed}/>
       <DashedDiver/>
       <ResumeProjectsItem project={projects.spaceexplore}/>
-      <DashedDiver/>
     </Container>
   </Layout>
 )
