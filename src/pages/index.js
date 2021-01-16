@@ -1,13 +1,12 @@
 import React from "react"
 import styled from "@emotion/styled"
-// import { css } from "@emotion/react"
-import BackgroundImage from "gatsby-background-image"
-
 import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import IndexCard from "../components/indexcard"
+import Banner from "../components/banner"
+
 
 const BannerHeading = styled("h1")`
   color: white;
@@ -47,14 +46,15 @@ const IndexPage = (props) => {
   return (
     <Layout>
       <SEO title="Home" />
-      <BackgroundImage
+      {/* <BackgroundImage
         fluid={props.data.indexImage.childImageSharp.fluid}
       >
         <BlackOverlay>
           <BannerHeading>Hi, Welcome!</BannerHeading>
           <BannerHeading>My name is Juan Pablo</BannerHeading>
         </BlackOverlay>
-      </BackgroundImage>
+      </BackgroundImage> */}
+      <Banner img={props.data.indexImage} text={"Hi, Welcome! My name is Juan Pablo"} size="large"></Banner>
       <IndexCard img={props.data.firstCardImg.childImageSharp.fluid} text={aboutmetext} title="About Me" imgPosition="left"/>
       {/* <IndexCard img={props.data.firstCardImg.childImageSharp.fluid} text={aboutmetext} title="Values" imgPosition="right"/>
       <IndexCard img={props.data.firstCardImg.childImageSharp.fluid} text={aboutmetext} title="What Now" imgPosition="left"/> */}

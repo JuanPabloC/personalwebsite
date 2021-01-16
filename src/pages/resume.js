@@ -4,7 +4,7 @@ import Layout from "../components/layout"
 import ResumeSection from "../components/resumesection"
 import ResumeItem from "../components/resumeitem"
 import ResumeEducationItem from "../components/resumeeducationitem"
-import BackgroundImage from "gatsby-background-image"
+import Banner from "../components/banner"
 import SEO from "../components/seo"
 import styled from "@emotion/styled"
 
@@ -34,38 +34,10 @@ const DashedDiver=styled("hr")`
   border-top: 1px dashed #bbb;
 `;
 
-const BlackOverlay = styled("div")`
-  width: 100%;
-  height: 20vh;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: -webkit-flex; /* Safari */
-  display: flex;
-  flex-direction: column;
-  background-color: rgba(0, 0, 0, 0.6);
-  justify-content: center;
-  align-items: center;
-`;
-
-const BannerHeading = styled("h1")`
-  color: white;
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
-  font-size: 3.5rem;
-  margin-bottom: 0px;
-`;
-
 const Resume = (props) => (
   <Layout>
     <SEO title="Resume" />
-    <BackgroundImage
-    fluid={props.data.manhattan.childImageSharp.fluid}>
-        <BlackOverlay>
-          <BannerHeading>My Resume</BannerHeading>
-        </BlackOverlay>
-    </BackgroundImage>
+    <Banner img={props.data.manhattan} text="My Resume" size="small"></Banner>
     <Container>
       <Title>Juan Pablo Castano</Title>
       <RoundDivider/>
