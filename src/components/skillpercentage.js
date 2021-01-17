@@ -11,7 +11,7 @@ const SkillPercentage = (props) => {
                 <Title level={5}>{props.skill.name}</Title>
             </Col>
             <Col span={18}>
-                <Progress percent={props.skill.level*100} showInfo={true}></Progress>
+                <Progress percent={props.skill.level*100} showInfo={false}></Progress>
             </Col>
         </Row>
     )

@@ -98,13 +98,40 @@ let skills = {
       {
         name: "JIRA",
         level: 0.3
+      },
+      {
+        name: "Salesforce",
+        level: 0.5
       }
     ]
   },
   communication: {
     title: "Soft Skills",
     skills: [
-
+      {
+        name: "Technical Presentations",
+        level: 0.7
+      },
+      {
+        name: "Product Demonstrations",
+        level: 0.7
+      },
+      {
+        name: "Public Speaking",
+        level: 0.9
+      },
+      {
+        name: "Team Collaboration",
+        level: 0.99
+      },
+      {
+        name: "Documentation",
+        level: 0.5
+      },
+      {
+        name: "Coaching",
+        level: 0.6
+      }
     ]
   },
   languages: {
@@ -112,11 +139,11 @@ let skills = {
     skills: [
       {
         name: "Spanish",
-        level: 1
+        level: 0.99
       },
       {
         name: "English",
-        level: 1
+        level: 0.99
       }
     ]
   }

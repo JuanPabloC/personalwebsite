@@ -27,6 +27,8 @@ const getSkillList = (skillslist) => (
 )
 
 const SkillsBox = (props) => {
+    const [currentList, setCurrentList] = useState(props.skills.software);
+
     return (
         <Wrapper>
             <Layout css={{borderRadius: '20px'}}>
@@ -36,18 +38,18 @@ const SkillsBox = (props) => {
                     defaultOpenKeys={['sub1']}
                     mode="inline">
                         <Menu.ItemGroup key="g1" title="Skills">
-                            <Menu.Item key={1}>{props.skills.software.title}</Menu.Item>
-                            <Menu.Item key={2}>{props.skills.frameworks.title}</Menu.Item>
-                            <Menu.Item key={3}>{props.skills.communication.title}</Menu.Item>
-                            <Menu.Item key={4}>{props.skills.languages.title}</Menu.Item>
+                            <Menu.Item key={1} onClick={() => setCurrentList(props.skills.software)}>{props.skills.software.title}</Menu.Item>
+                            <Menu.Item key={2} onClick={() => setCurrentList(props.skills.frameworks)}>{props.skills.frameworks.title}</Menu.Item>
+                            <Menu.Item key={3} onClick={() => setCurrentList(props.skills.communication)}>{props.skills.communication.title}</Menu.Item>
+                            <Menu.Item key={4} onClick={() => setCurrentList(props.skills.languages)}>{props.skills.languages.title}</Menu.Item>
                         </Menu.ItemGroup>
                     </Menu>
                 </Sider>
                 <Content>
                     <SkillsWrapper>
                         <Typography>
-                            <Title level={3}>{props.skills.software.title}</Title>
-                            <Text>{getSkillList(props.skills.software)}</Text>
+                            <Title level={3}>{currentList.title}</Title>
+                            <Text>{getSkillList(currentList)}</Text>
                         </Typography>
                     </SkillsWrapper>
                 </Content>
@@ -58,8 +60,3 @@ const SkillsBox = (props) => {
 }
 
 export default SkillsBox
-
-let example = {
-    name: "Javascript",
-    level: 0.8
-}
