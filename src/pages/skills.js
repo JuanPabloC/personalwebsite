@@ -1,11 +1,15 @@
 import React from "react"
+
+import { graphql } from 'gatsby'
 import Layout from "../components/layout"
 import styled from "@emotion/styled"
 import SEO from "../components/seo"
 import Skillsbox from "../components/skillsbox"
+import Banner from "../components/banner"
+
 
 const Wrapper = styled("div")`
-  margin: 0px 60px;
+  margin: 20px 60px 0px 60px; 
   padding: 30px 60px; 
   background: white;
   border-color: rgba(0,0,0,0.1);
@@ -14,9 +18,10 @@ const Wrapper = styled("div")`
   border-radius: 20px;
 `;
 
-const Skills = () => (
+const Skills = (props) => (
   <Layout>
     <SEO title="Skills" />
+    <Banner img={props.data.binary} text={"My Skills"} size="small"></Banner>
     <Wrapper>
       <Skillsbox></Skillsbox>
     </Wrapper>
@@ -24,3 +29,15 @@ const Skills = () => (
 )
 
 export default Skills
+
+export const pageQuery = graphql`
+  query {
+    binary: file(relativePath: {eq: "binary.jpg"}) {
+      childImageSharp {
+        fluid(maxWidth: 1800) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`;
