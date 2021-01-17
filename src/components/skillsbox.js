@@ -2,6 +2,7 @@ import React, {useState} from "react"
 
 import { Menu, Layout, Typography} from "antd"
 import styled from "@emotion/styled"
+import SkillPercentage from "./skillpercentage";
 
 const { Sider, Content } = Layout;
 const { Title, Text } = Typography;
@@ -17,6 +18,14 @@ const SkillsWrapper = styled("div")`
     font-style: bold;
 `;
 
+const getSkillList = (skillslist) => (
+    <div>
+        {skillslist.skills.map((skl) => (
+          <SkillPercentage skill={skl}></SkillPercentage>
+        ))}
+    </div>
+)
+
 const SkillsBox = (props) => {
     return (
         <Wrapper>
@@ -27,19 +36,18 @@ const SkillsBox = (props) => {
                     defaultOpenKeys={['sub1']}
                     mode="inline">
                         <Menu.ItemGroup key="g1" title="Skills">
-                            <Menu.Item key={1}>Software</Menu.Item>
-                            <Menu.Item key={2}>Frameworks and Tools</Menu.Item>
-                            <Menu.Item key={3}>Communication</Menu.Item>
-                            <Menu.Item key={4}>Languages</Menu.Item>
-                            <Menu.Item key={5}>Relevant Coursework</Menu.Item>
+                            <Menu.Item key={1}>{props.skills.software.title}</Menu.Item>
+                            <Menu.Item key={2}>{props.skills.frameworks.title}</Menu.Item>
+                            <Menu.Item key={3}>{props.skills.communication.title}</Menu.Item>
+                            <Menu.Item key={4}>{props.skills.languages.title}</Menu.Item>
                         </Menu.ItemGroup>
                     </Menu>
                 </Sider>
                 <Content>
                     <SkillsWrapper>
                         <Typography>
-                            <Title level={3}>Skills Title</Title>
-                            <Text> Hello these are my whatever skills</Text>
+                            <Title level={3}>{props.skills.software.title}</Title>
+                            <Text>{getSkillList(props.skills.software)}</Text>
                         </Typography>
                     </SkillsWrapper>
                 </Content>
@@ -50,3 +58,8 @@ const SkillsBox = (props) => {
 }
 
 export default SkillsBox
+
+let example = {
+    name: "Javascript",
+    level: 0.8
+}
