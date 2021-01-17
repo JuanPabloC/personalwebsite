@@ -78,7 +78,6 @@ header {
   display: flex;
   flex-direction: row;
   list-style: none;
-  text-transform: lowercase;
   justify-content: center;
   align-items: center;
   margin: 0;
@@ -95,7 +94,7 @@ header {
 .navItem {
   padding: 1em;
   margin: 0;
-  font-family: "Roboto Slab";
+  /* font-family: "Roboto Slab"; */
   font-weight: 400;
   font-size: 20px;
   border-radius: 15px;
