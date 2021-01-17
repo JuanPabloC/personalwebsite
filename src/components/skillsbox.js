@@ -1,4 +1,5 @@
 import React, {useState} from "react"
+
 import { Menu, Layout, Typography} from "antd"
 import styled from "@emotion/styled"
 
@@ -6,17 +7,15 @@ const { Sider, Content } = Layout;
 const { Title, Text } = Typography;
 
 const Wrapper = styled("div")`
-//   border-color: rgba(0,0,0,0.1);
-//   border-style: solid;
-//   border-width: 2px;
+    //   border-color: rgba(0,0,0,0.1);
+    //   border-style: solid;
+    //   border-width: 2px;
 `;
 
 const SkillsWrapper = styled("div")`
     padding: 0px 20px;
     font-style: bold;
 `;
-
-
 
 const SkillsBox = (props) => {
     return (
@@ -31,6 +30,8 @@ const SkillsBox = (props) => {
                             <Menu.Item key={1}>Software</Menu.Item>
                             <Menu.Item key={2}>Frameworks and Tools</Menu.Item>
                             <Menu.Item key={3}>Communication</Menu.Item>
+                            <Menu.Item key={4}>Languages</Menu.Item>
+                            <Menu.Item key={5}>Relevant Coursework</Menu.Item>
                         </Menu.ItemGroup>
                     </Menu>
                 </Sider>
