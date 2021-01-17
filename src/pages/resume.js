@@ -1,4 +1,5 @@
 import React from "react"
+
 import { graphql } from 'gatsby'
 import Layout from "../components/layout"
 import ResumeSection from "../components/resumesection"
@@ -198,5 +199,16 @@ let education = {
     degree: "BS Computer Science with Minor in Business, Class of 2018",
     scholarships: "Scholarships: Dean's Scholarship",
     studyabroad: "Study Abroad Program: University of Bristol (UK)",
+    courses: [
+      "Data Structures and Algorithms",
+      "Human-Computer Interaction",
+      "Web Technologies",
+      "Artificial Intelligence",
+      "Computer Organization", 
+      "Mobile App Development",
+      "Programming Language Design & Implementation", 
+      "The Science of Data Structures",
+      "The Science of Programming"
+    ]
   }
 }

@@ -1,35 +1,10 @@
 import React from "react"
-import styled from "@emotion/styled"
-import { graphql } from "gatsby"
 
+import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import IndexCard from "../components/indexcard"
 import Banner from "../components/banner"
-
-
-const BannerHeading = styled("h1")`
-  color: white;
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
-  font-size: 3.5rem;
-`;
-
-const BlackOverlay = styled("div")`
-  width: 100%;
-  height: 80vh;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: -webkit-flex; /* Safari */
-  display: flex;
-  flex-direction: column;
-  background-color: rgba(0, 0, 0, 0.4);
-  justify-content: center;
-  align-items: left;
-  padding: 15vh;
-`;
 
 const aboutmetext = [
   `Spanish & English Bilingual | Mexican | Looking for a new role!`,
@@ -46,14 +21,6 @@ const IndexPage = (props) => {
   return (
     <Layout>
       <SEO title="Home" />
-      {/* <BackgroundImage
-        fluid={props.data.indexImage.childImageSharp.fluid}
-      >
-        <BlackOverlay>
-          <BannerHeading>Hi, Welcome!</BannerHeading>
-          <BannerHeading>My name is Juan Pablo</BannerHeading>
-        </BlackOverlay>
-      </BackgroundImage> */}
       <Banner img={props.data.indexImage} text={"Hi, Welcome! My name is Juan Pablo"} size="large"></Banner>
       <IndexCard img={props.data.firstCardImg.childImageSharp.fluid} text={aboutmetext} title="About Me" imgPosition="left"/>
       {/* <IndexCard img={props.data.firstCardImg.childImageSharp.fluid} text={aboutmetext} title="Values" imgPosition="right"/>

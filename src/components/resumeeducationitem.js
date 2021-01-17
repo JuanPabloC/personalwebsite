@@ -1,10 +1,12 @@
 import React from "react"
+
 import styled from "@emotion/styled"
-import { Col, Row } from "antd"
+import { Col, Row, Collapse, Typography} from "antd"
 import Img from "gatsby-image"
 import { css } from "@emotion/react";
-import PropTypes from "prop-types"
-import { Link } from "gatsby";
+
+const { Panel } = Collapse;
+const { Paragraph } = Typography;
 
 const ImgBox = styled("div")`
     width: 70%;
@@ -49,6 +51,14 @@ const bottomMargin = css`
     margin-bottom: 20px;
 `;
 
+const courseList = (courses) => (
+    <ul>
+        {courses.map((course, index) => (
+          <li key={index}>{course}</li>
+        ))}
+    </ul>
+)
+
 
 const ResumeEducationItem = (props) => {
 
@@ -77,7 +87,13 @@ const ResumeEducationItem = (props) => {
                 <p>{props.org.degree}</p>
                 <p>{props.org.scholarships}</p>
                 <p>{props.org.studyabroad}</p>
-                <Link to="/skills">Go to relevant coursework</Link>
+                <Collapse>
+                    <Panel header="Relevant Coursework" key={1} forceRender="true">
+                        <Typography style={{marginBottom: 15}}>
+                            <Paragraph>{courseList(props.org.courses)}</Paragraph>
+                        </Typography>
+                    </Panel>
+                </Collapse>
             </Col>
 
             {/* Date */}
