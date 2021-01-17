@@ -40,7 +40,7 @@ const Resume = (props) => (
     <SEO title="Resume" />
     <Banner img={props.data.manhattan} text="My Resume" size="small"></Banner>
     <Container>
-      <Title>Juan Pablo Castano</Title>
+      <Title>Juan Pablo Castaño</Title>
       <RoundDivider/>
       <ResumeSection title={"Education"}/>
       <ResumeEducationItem image={props.data.uofr.childImageSharp.fluid} org={education.uofr}/>
