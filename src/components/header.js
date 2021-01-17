@@ -24,7 +24,7 @@ const Header = ({ menuLinks }) => {
           <Img fixed={logoq.logo.childImageSharp.fixed} alt="JP" />
         </Link>
         <Link style={{ color: `black`, paddingBottom:8 }} to={"/"}>
-          Castano
+          Castaño
         </Link>
       </h1>
       <ul className="nav">

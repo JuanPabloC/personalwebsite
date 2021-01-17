@@ -21,7 +21,7 @@ const Wrapper = styled("div")`
 const Skills = (props) => (
   <Layout>
     <SEO title="Skills" />
-    <Banner img={props.data.binary} text={"My Skills"} size="small"></Banner>
+    <Banner img={props.data.binary} text={"What I Can Do"} size="small"></Banner>
     <Wrapper>
       <Skillsbox skills={skills}></Skillsbox>
     </Wrapper>

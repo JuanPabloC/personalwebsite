@@ -38,10 +38,8 @@ const DashedDiver=styled("hr")`
 const Resume = (props) => (
   <Layout>
     <SEO title="Resume" />
-    <Banner img={props.data.manhattan} text="My Resume" size="small"></Banner>
+    <Banner img={props.data.manhattan} text="What I've Done" size="small"></Banner>
     <Container>
-      <Title>Juan Pablo Castano</Title>
-      <RoundDivider/>
       <ResumeSection title={"Education"}/>
       <ResumeEducationItem image={props.data.uofr.childImageSharp.fluid} org={education.uofr}/>
       <RoundDivider/>
@@ -96,7 +94,7 @@ let resumeJobs = {
     name: "Code Climate",
     url: "https://codeclimate.com/",
     location: "New York, NY",
-    date: "Sept. 2018 - Oct. 2020",
+    date: "Sept. 2018 – Oct. 2020",
     description: "Code Climate’s flagship product, Velocity, analyzes all the data from your GitHub repos and provides you with heads-up displays, real-time analytics, and custom reports to give you a clearer perspective on how your engineering team is working. \n\nNo more tedious hours scouring Github, scanning JIRA tickets, or pinging developers. With instant access to your team’s progress, blockers, and reports, you always have everything you need to make confident, data-informed decisions. Spend less time surfacing issues, and more time solving them.",
     roles: [
       {
@@ -137,7 +135,7 @@ let resumeJobs = {
     name: "Geometrica Inc",
     url: "https://www.geometrica.com/",
     location: "Monterrey, Mexico",
-    date: "June 2017 - Aug. 2017",
+    date: "June 2017 – Aug. 2017",
     description: "Geometrica has designed, manufactured and installed domes and space frames since 1992. The company has developed unique technology to build amazing, long span structures for architectural and industrial buildings. With offices in Houston, Texas and Monterrey, Mexico, and a global network of representatives, Geometrica has delivered domes and space frames in more than 40 countries in North and South America, Europe, Asia and Africa.",
     roles: [
       {
@@ -154,7 +152,7 @@ let resumeJobs = {
     name: "University of Rochester",
     url: "https://www.rochester.edu/",
     location: "Rochester, NY",
-    date: "Aug. 2015 - May 2018",
+    date: "Aug. 2015 – May 2018",
     description: "The University of Rochester (UR) is a private, nonsectarian, research-intensive university located in Rochester, New York. The University grants bachelor's, masters, and doctoral degrees through seven schools and various interdisciplinary programs.The University enrolls over 6,000 undergraduates and nearly 5,000 graduate students, and competes in the NCAA's Division III for athletics. The University with its affiliated UR Medicine health system is the largest employer in the Greater Rochester area.",
     roles: [
       {
@@ -195,7 +193,7 @@ let education = {
   uofr: {
     name: "University of Rochester",
     location: "Rochester, NY",
-    date: "Aug. 2014 - May 2018",
+    date: "Aug. 2014 – May 2018",
     degree: "BS Computer Science with Minor in Business, Class of 2018",
     scholarships: "Scholarships: Dean's Scholarship",
     studyabroad: "Study Abroad Program: University of Bristol (UK)",
