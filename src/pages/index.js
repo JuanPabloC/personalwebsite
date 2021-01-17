@@ -21,7 +21,7 @@ const IndexPage = (props) => {
   return (
     <Layout>
       <SEO title="Home" />
-      <Banner img={props.data.indexImage} text={"Hi, Welcome! My name is Juan Pablo"} size="large"></Banner>
+      <Banner img={props.data.indexImage} text={"Hi, welcome! My name is Juan Pablo."} size="large"></Banner>
       <IndexCard img={props.data.firstCardImg.childImageSharp.fluid} text={aboutmetext} title="About Me" imgPosition="left"/>
       {/* <IndexCard img={props.data.firstCardImg.childImageSharp.fluid} text={aboutmetext} title="Values" imgPosition="right"/>
       <IndexCard img={props.data.firstCardImg.childImageSharp.fluid} text={aboutmetext} title="What Now" imgPosition="left"/> */}
