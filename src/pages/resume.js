@@ -38,7 +38,7 @@ const DashedDiver=styled("hr")`
 const Resume = (props) => (
   <Layout>
     <SEO title="Resume" />
-    <Banner img={props.data.manhattan} text="My Resume" size="small"></Banner>
+    <Banner img={props.data.manhattan} text="What I've Done" size="small"></Banner>
     <Container>
       <ResumeSection title={"Education"}/>
       <ResumeEducationItem image={props.data.uofr.childImageSharp.fluid} org={education.uofr}/>
