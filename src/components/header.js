@@ -1,6 +1,7 @@
+import React from "react"
+
 import { Link, graphql, useStaticQuery } from "gatsby"
 import PropTypes from "prop-types"
-import React from "react"
 import Img from "gatsby-image"
 
 const Header = ({ menuLinks }) => {

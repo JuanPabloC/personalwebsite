@@ -1,9 +1,9 @@
 import React from "react"
+
 import styled from "@emotion/styled"
 import { Col, Row } from "antd"
 import Img from "gatsby-image"
 import { css } from "@emotion/react";
-import PropTypes from "prop-types"
 import { Link } from "gatsby";
 
 const ImgBox = styled("div")`
