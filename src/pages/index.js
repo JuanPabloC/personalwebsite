@@ -32,21 +32,21 @@ export const pageQuery = graphql`
     },
     whoami: file(relativePath: {eq: "nycskyline.jpg"}) {
       childImageSharp {
-        fluid(maxHeight: 1800) {
+        fluid(maxWidth: 1800) {
           ...GatsbyImageSharpFluid
         }
       }
     },
     whereimat: file(relativePath: {eq: "whereimat.jpg"}) {
       childImageSharp {
-        fluid(maxHeight: 1800) {
+        fluid(maxWidth: 1800) {
           ...GatsbyImageSharpFluid
         }
       }
     },
     whativalue: file(relativePath: {eq: "whativalue.jpg"}) {
       childImageSharp {
-        fluid(maxHeight: 1800) {
+        fluid(maxWidth: 1800) {
           ...GatsbyImageSharpFluid
         }
       }
