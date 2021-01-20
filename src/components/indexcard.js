@@ -58,7 +58,7 @@ const getOrderLeft = (props) => {
                         <CardText>
                             <Divider style={{borderWidth: 1, borderColor: 'var(--lynch)' }} orientation="left"><h2>{props.title}</h2></Divider>
                             <Typography>
-                                <Paragraph css={{whiteSpace: 'pre-wrap'}} ellipsis={{ rows: 10, expandable: true, symbol: 'read more' }}>{props.text}</Paragraph>
+                                <Paragraph css={{whiteSpace: 'pre-wrap'}}>{props.text}</Paragraph>
                             </Typography>
                         </CardText>
                     </Col>
@@ -77,7 +77,7 @@ const getOrderRight = (props) => {
                         <CardText>
                             <Divider style={{borderWidth: 1, borderColor: 'var(--lynch)' }} orientation="left"><h2>{props.title}</h2></Divider>
                             <Typography>
-                                <Paragraph css={{whiteSpace: 'pre-wrap'}} ellipsis={{ rows: 10, expandable: true, symbol: 'read more' }}>{props.text}</Paragraph>
+                                <Paragraph css={{whiteSpace: 'pre-wrap'}}>{props.text}</Paragraph>
                             </Typography>
                         </CardText>
                     </Col>
