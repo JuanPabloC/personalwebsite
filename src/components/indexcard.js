@@ -21,10 +21,12 @@ const Card =  styled("div")`
 `;
 
 const ImgBox = styled("div")`
-    width: 70%;
-    display: block;
+    display: flex;
+    height: 100%
     margin-left: auto;
     margin-right: auto;
+    align-items: center;
+    justify-content: center;
 `;
 
 const CardText = styled("div")`
@@ -41,6 +43,7 @@ const Paragraph = styled("div")`
 
 const imgedit = css`
     margin: 0;
+    width: 80%;
     overflow: hidden;
     border-radius: 25px;    
 `;
@@ -58,13 +61,7 @@ const getOrderLeft = (props) => {
                     <Col span={16}> {/* Text */}
                         <CardText>
                             <Divider style={{borderWidth: 1, borderColor: 'var(--lynch)' }} orientation="right"><h2>{props.title}</h2></Divider>
-
-                            {props.text.map(par => (
-                                <div>
-                                    <Paragraph>{par}</Paragraph>
-                                    <p/>
-                                </div>
-                            ))}
+                            <p style={{whiteSpace: 'pre-wrap'}}>{props.text}</p>
                         </CardText>
                     </Col>
                 </Row>
@@ -81,12 +78,7 @@ const getOrderRight = (props) => {
                     <Col span={16}> {/* Text */}
                         <CardText>
                             <Divider style={{borderWidth: 1, borderColor: 'var(--lynch)' }} orientation="left"><h2>{props.title}</h2></Divider>
-                            {props.text.map(par => (
-                                <div>
-                                    <Paragraph>{par}</Paragraph>
-                                    <p/>
-                                </div>
-                            ))}
+                            <p style={{whiteSpace: 'pre-wrap'}}>{props.text}</p>
                         </CardText>
                     </Col>
                     <Col span={8}> {/* Image */}
