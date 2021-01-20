@@ -60,9 +60,6 @@ const respList = (resps) => (
 )
 
 const ResumeItem = (props) => {
-
-    console.log(JSON.stringify(props))
-
     return (
         <Row css={bottomMargin}>
             <Col span={3}>

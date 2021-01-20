@@ -61,9 +61,6 @@ const courseList = (courses) => (
 
 
 const ResumeEducationItem = (props) => {
-
-    console.log(JSON.stringify(props))
-
     return (
         <Row css={bottomMargin}>
 
