@@ -5,7 +5,7 @@ module.exports = {
     author: `@JuanPabloC`,
     menuLinks: [
       {
-        name: `Home`,
+        name: `About Me`,
         link: `/`
       },
       {

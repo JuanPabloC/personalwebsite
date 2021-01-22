@@ -1,9 +1,9 @@
 import React from "react"
+
 import styled from "@emotion/styled"
 import { Col, Row, Collapse } from "antd"
 import Img from "gatsby-image"
 import { css } from "@emotion/react";
-import PropTypes from "prop-types"
 
 const { Panel } = Collapse;
 
@@ -60,9 +60,6 @@ const respList = (resps) => (
 )
 
 const ResumeItem = (props) => {
-
-    console.log(JSON.stringify(props))
-
     return (
         <Row css={bottomMargin}>
             <Col span={3}>

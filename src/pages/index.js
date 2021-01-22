@@ -1,63 +1,20 @@
 import React from "react"
-import styled from "@emotion/styled"
-// import { css } from "@emotion/react"
-import BackgroundImage from "gatsby-background-image"
 
 import { graphql } from "gatsby"
-
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import IndexCard from "../components/indexcard"
-
-const BannerHeading = styled("h1")`
-  color: white;
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
-  font-size: 3.5rem;
-`;
-
-const BlackOverlay = styled("div")`
-  width: 100%;
-  height: 80vh;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: -webkit-flex; /* Safari */
-  display: flex;
-  flex-direction: column;
-  background-color: rgba(0, 0, 0, 0.4);
-  justify-content: center;
-  align-items: left;
-  padding: 15vh;
-`;
-
-const aboutmetext = [
-  `Spanish & English Bilingual | Mexican | Looking for a new role!`,
-  `I’m an energetic and motivated fast-learner currently looking to
-  return to software development after two years of customer-facing
-  roles in the engineering intelligence industry.`,
-  `Passionate about improving team culture,
-  tackling new challenges, mentoring and contributing to
-  tools/teams that have a positive impacting our society.`
-];
+import Banner from "../components/banner"
 
 const IndexPage = (props) => {
 
   return (
     <Layout>
       <SEO title="Home" />
-      <BackgroundImage
-        fluid={props.data.indexImage.childImageSharp.fluid}
-      >
-        <BlackOverlay>
-          <BannerHeading>Hi, Welcome!</BannerHeading>
-          <BannerHeading>My name is Juan Pablo</BannerHeading>
-        </BlackOverlay>
-      </BackgroundImage>
-      <IndexCard img={props.data.firstCardImg.childImageSharp.fluid} text={aboutmetext} title="About Me" imgPosition="left"/>
-      {/* <IndexCard img={props.data.firstCardImg.childImageSharp.fluid} text={aboutmetext} title="Values" imgPosition="right"/>
-      <IndexCard img={props.data.firstCardImg.childImageSharp.fluid} text={aboutmetext} title="What Now" imgPosition="left"/> */}
+      <Banner img={props.data.indexImage} text={"Hi! Welcome to my life."} size="large"></Banner>
+      <IndexCard img={props.data.whoami.childImageSharp.fluid} text={whoamiText} title="Who I Am" imgPosition="left"/>
+      <IndexCard img={props.data.whereimat.childImageSharp.fluid} text={whereimatText} title="Where I'm At" imgPosition="right"/>
+      <IndexCard img={props.data.whativalue.childImageSharp.fluid} text={whativalueText} title="What I Value" imgPosition="left"/>
     </Layout>
   )
 }
@@ -73,12 +30,46 @@ export const pageQuery = graphql`
         }
       }
     },
-    firstCardImg: file(relativePath: {eq: "nycskyline.jpg"}) {
+    whoami: file(relativePath: {eq: "nycskyline.jpg"}) {
       childImageSharp {
-        fluid(maxHeight: 1800) {
+        fluid(maxWidth: 1800) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    },
+    whereimat: file(relativePath: {eq: "whereimat.jpg"}) {
+      childImageSharp {
+        fluid(maxWidth: 1800) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    },
+    whativalue: file(relativePath: {eq: "whativalue.jpg"}) {
+      childImageSharp {
+        fluid(maxWidth: 1800) {
           ...GatsbyImageSharpFluid
         }
       }
     }
   }
 `;
+
+const whoamiText = `Hello! My name is Juan Pablo Castaño, but I go by JP. I was born and raised in Mexico, but have lived in the US for 6 years. Even though I love everything about Mexico, and that\'s where most of my family is, I decided in high school that I wanted to branch out and continue my education in the US. That led me to the University of Rochester, where I graduated as part of the Class of 2018 with a BS in Computer Science and a minor in Business. Even though completely unfamiliar at first,I will always love and appreciate Rochester, NY for the countless memories and for connecting me to now life-long friends.
+
+When I graduated, I decided to take a leap of faith and follow my dream of living in New York City. So, I moved to the big apple with no job or savings, but with a plan and an amazing support system of friends and family.
+
+After a couple stressful months of job searching, I got the opportunity to join Code Climate, an awesome startup leading the Engineering Intelligence industry. I joined as a Sales Development Representative and spent the next two years working and learning alongside incredible minds, some of which I now call best friends. Now, I'm looking for my next big move.`
+
+const whereimatText = `I am currently looking to kickstart my career as a Software Engineer! With a Computer Science degree, software engineering internship experience, continuous programming practice and education, and two years at a tech start-up, I have a great foundation to start as a junior developer.
+
+My goal is to join a tech company that prides itself in their positive impact to society. I'd love to build amazing software products or services that ultimately help improve people's lives. My dream job would also allow me to learn from experienced mentors and coworkers, while also offering enough independence as a developer to problem-solve and be creative.
+
+Most of my coding experience falls under web development, particularly front-end (I built this website myself from scratch). I am, however, very interested and excited to learn new languages, technologies and practices that would help me grow to be well-rounded engineer.`
+
+const whativalueText = `• Gratitude: I had the privilege of growing up in a loving and supporting family, where my parents gave me everything I needed to be successful. I'll forever be grateful for their love and support, and now I try to live my life never forgetting to be thankful for everything I have.  
+   
+• Honesty & Openness: Communication is key. I believe in the power of good communication both in our personal and professional lives, but it only works if it's honest. This is why I try to always be as open and honest as possible with family, friends, and colleagues, even when it's hard or uncomfortable.
+
+• Fun Hard Work: We require commitment and hard work to get things done, and I believe that for people to do their best work, they need an environment that allows for it. This is why I always try to foster a culture where people are inspired and motivated to work hard and enjoy themselves. Plus, I've always worked very hard to achieve my own goals, so I like to surround myself with like-minded individuals.
+
+• Diversity and Inclusion: Having lived in four countries up to this point, where I've met people from many different walks of life, I've grown to understand the importance of diversity. Both in people and of thought. A diverse community, both in our personal and work lives, is incredibly important, and it is only achievable if its inclusive of everyone and anyone. So, I always strive to become more inclusive myself, and will always try my best to make my surroundings inclusive as well.`

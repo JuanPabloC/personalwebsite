@@ -1,6 +1,7 @@
+import React from "react"
+
 import { Link, graphql, useStaticQuery } from "gatsby"
 import PropTypes from "prop-types"
-import React from "react"
 import Img from "gatsby-image"
 
 const Header = ({ menuLinks }) => {
@@ -23,7 +24,7 @@ const Header = ({ menuLinks }) => {
           <Img fixed={logoq.logo.childImageSharp.fixed} alt="JP" />
         </Link>
         <Link style={{ color: `black`, paddingBottom:8 }} to={"/"}>
-          Castano
+          Castaño
         </Link>
       </h1>
       <ul className="nav">
