@@ -5,6 +5,7 @@ import Layout from "../components/layout"
 import ResumeSection from "../components/resumesection"
 import ResumeItem from "../components/resumeitem"
 import ResumeEducationItem from "../components/resumeeducationitem"
+import ResumeProjectsItem from "../components/resumeprojectsitem"
 import Banner from "../components/banner"
 import SEO from "../components/seo"
 import styled from "@emotion/styled"
@@ -35,24 +36,34 @@ const DashedDiver=styled("hr")`
   border-top: 1px dashed #bbb;
 `;
 
-const Resume = (props) => (
-  <Layout>
-    <SEO title="Resume" />
-    <Banner img={props.data.manhattan} text="What I've Done" size="small"></Banner>
-    <Container>
-      <ResumeSection title={"Education"}/>
-      <ResumeEducationItem image={props.data.uofr.childImageSharp.fluid} org={education.uofr}/>
-      <RoundDivider/>
-      <ResumeSection title={"Experience"}></ResumeSection>
-      <ResumeItem image={props.data.codeclimate.childImageSharp.fluid} org={resumeJobs.codeclimate}></ResumeItem>
-      <DashedDiver/>
-      <ResumeItem image={props.data.geometrica.childImageSharp.fluid} org={resumeJobs.geometrica}></ResumeItem>
-      <DashedDiver/>
-      <ResumeItem image={props.data.uofr.childImageSharp.fluid} org={resumeJobs.uofr}></ResumeItem>
-      <DashedDiver/>
-    </Container>
-  </Layout>
-)
+const Resume = (props) => {
+  return (
+    <Layout>
+      <SEO title="Resume" />
+      <Banner img={props.data.manhattan} text="What I've Done" size="small"></Banner>
+      <Container>
+        <ResumeSection title={"Education"}/>
+        <ResumeEducationItem image={props.data.uofr.childImageSharp.fluid} org={education.uofr}/>
+        <RoundDivider/>
+        <ResumeSection title={"Experience"}></ResumeSection>
+        <ResumeItem image={props.data.codeclimate.childImageSharp.fluid} org={resumeJobs.codeclimate}></ResumeItem>
+        <DashedDiver/>
+        <ResumeItem image={props.data.geometrica.childImageSharp.fluid} org={resumeJobs.geometrica}></ResumeItem>
+        <DashedDiver/>
+        <ResumeItem image={props.data.uofr.childImageSharp.fluid} org={resumeJobs.uofr}></ResumeItem>
+        <RoundDivider/>
+        <ResumeSection title={"Projects"}/>
+        <ResumeProjectsItem project={projects.personalwebsite}/>
+        <DashedDiver/>
+        <ResumeProjectsItem project={projects.facerecognitionbrain} images={[props.data.facerec1.childImageSharp.fluid, props.data.facerec2.childImageSharp.fluid, props.data.facerec3.childImageSharp.fluid]}/>
+        <DashedDiver/>
+        <ResumeProjectsItem project={projects.memefeed} images={[props.data.memefeed1.childImageSharp.fluid, props.data.memefeed2.childImageSharp.fluid, props.data.memefeed3.childImageSharp.fluid]}/>
+        <DashedDiver/>
+        <ResumeProjectsItem project={projects.spaceexplore}/>
+      </Container>
+    </Layout>
+  )
+}
 
 export default Resume
 
@@ -85,7 +96,49 @@ export const pageQuery = graphql`
           ...GatsbyImageSharpFluid
         }
       }
-    }
+    },
+    facerec1: file(relativePath: {eq: "facerec1.png"}) {
+      childImageSharp {
+        fluid(maxWidth: 800) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    },
+    facerec2: file(relativePath: {eq: "facerec2.png"}) {
+      childImageSharp {
+        fluid(maxWidth: 800) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    },
+    facerec3: file(relativePath: {eq: "facerec3.png"}) {
+      childImageSharp {
+        fluid(maxWidth: 800) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    },
+    memefeed1: file(relativePath: {eq: "memefeed1.png"}) {
+      childImageSharp {
+        fluid(maxWidth: 800) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    },
+    memefeed2: file(relativePath: {eq: "memefeed2.png"}) {
+      childImageSharp {
+        fluid(maxWidth: 800) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    },
+    memefeed3: file(relativePath: {eq: "memefeed3.png"}) {
+      childImageSharp {
+        fluid(maxWidth: 800) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    },
   }
 `;
 
@@ -209,4 +262,52 @@ let education = {
       "The Science of Programming"
     ]
   }
+}
+
+let projects = {
+  personalwebsite: {
+    title: "My Personal Website",
+    date: "2020-2021",
+    description: "Built a personal website to showcase my front end development skills and keep all relevant information in one place. Hosted on Netlify using Continuous Deployment.\n\nBuilt with Gatsby.js, using HTML, CSS, Javascript, Node.js and React.",
+    languages: [
+      
+    ],
+    skills: [
+
+    ]
+  },
+  facerecognitionbrain: {
+    title: "Face Recognition Brain",
+    date: "2018",
+    description: "Final project for Full-Stack Web-Development online course",
+    languages: [
+      
+    ],
+    skills: [
+
+    ]
+  },
+  memefeed: {
+    title: "MemeFeed",
+    date: "2018",
+    description: "Final project for Human-Interaction course that used crawlers to gather content from various pages including YouTube and Reddit, and consolidated it in a single feed.",
+    languages: [
+      
+    ],
+    skills: [
+
+    ]
+  },
+  spaceexplore: {
+    title: "SpaceExplore",
+    date: "2017",
+    description: "Pair-programmed webapplication for Web Technologies course using XHTML, CSS, Javascript and SQLite.",
+    languages: [
+      
+    ],
+    skills: [
+
+    ]
+  }
+
 }

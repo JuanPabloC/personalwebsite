@@ -41,7 +41,7 @@ main {
 
 header {
   background: white;
-  height: 12vh;
+  height: 80px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -113,7 +113,7 @@ header {
 /* Footer CSS */
 
 footer {
-  height: 12vh;
+  height: 80px;
   background: white;
 
   display: flex;
