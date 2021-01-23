@@ -36,32 +36,47 @@ const DashedDiver=styled("hr")`
   border-top: 1px dashed #bbb;
 `;
 
-const Resume = (props) => (
-  <Layout>
-    <SEO title="Resume" />
-    <Banner img={props.data.manhattan} text="What I've Done" size="small"></Banner>
-    <Container>
-      <ResumeSection title={"Education"}/>
-      <ResumeEducationItem image={props.data.uofr.childImageSharp.fluid} org={education.uofr}/>
-      <RoundDivider/>
-      <ResumeSection title={"Experience"}></ResumeSection>
-      <ResumeItem image={props.data.codeclimate.childImageSharp.fluid} org={resumeJobs.codeclimate}></ResumeItem>
-      <DashedDiver/>
-      <ResumeItem image={props.data.geometrica.childImageSharp.fluid} org={resumeJobs.geometrica}></ResumeItem>
-      <DashedDiver/>
-      <ResumeItem image={props.data.uofr.childImageSharp.fluid} org={resumeJobs.uofr}></ResumeItem>
-      <RoundDivider/>
-      <ResumeSection title={"Projects"}/>
-      <ResumeProjectsItem project={projects.personalwebsite}/>
-      <DashedDiver/>
-      <ResumeProjectsItem project={projects.facerecognitionbrain}/>
-      <DashedDiver/>
-      <ResumeProjectsItem project={projects.memefeed}/>
-      <DashedDiver/>
-      <ResumeProjectsItem project={projects.spaceexplore}/>
-    </Container>
-  </Layout>
-)
+const Resume = (props) => {
+  // projects.facerecognitionbrain.images = [props.data.facerec1, props.data.facerec2, props.data.facerec3]
+  // projects.memefeed.images = [props.data.memefeed1, props.data.memefeed2, props.data.memefeed3]
+  
+  // console.log(projects.facerecognitionbrain.images)
+
+  let face = props.data.facerec1.childImageSharp.fluid
+  let meme = props.data.memefeed1.childImageSharp.fluid
+
+  const memes = [props.data.facerec1.childImageSharp.fluid, props.data.facerec2.childImageSharp.fluid, props.data.facerec3.childImageSharp.fluid]
+  const faces = [props.data.memefeed1.childImageSharp.fluid, props.data.memefeed2.childImageSharp.fluid, props.data.memefeed3.childImageSharp.fluid]
+
+  console.log(memes)
+  console.log(faces)
+  return (
+    <Layout>
+      <SEO title="Resume" />
+      <Banner img={props.data.manhattan} text="What I've Done" size="small"></Banner>
+      <Container>
+        <ResumeSection title={"Education"}/>
+        <ResumeEducationItem image={props.data.uofr.childImageSharp.fluid} org={education.uofr}/>
+        <RoundDivider/>
+        <ResumeSection title={"Experience"}></ResumeSection>
+        <ResumeItem image={props.data.codeclimate.childImageSharp.fluid} org={resumeJobs.codeclimate}></ResumeItem>
+        <DashedDiver/>
+        <ResumeItem image={props.data.geometrica.childImageSharp.fluid} org={resumeJobs.geometrica}></ResumeItem>
+        <DashedDiver/>
+        <ResumeItem image={props.data.uofr.childImageSharp.fluid} org={resumeJobs.uofr}></ResumeItem>
+        <RoundDivider/>
+        <ResumeSection title={"Projects"}/>
+        <ResumeProjectsItem project={projects.personalwebsite}/>
+        <DashedDiver/>
+        <ResumeProjectsItem project={projects.facerecognitionbrain} images={faces}/>
+        <DashedDiver/>
+        <ResumeProjectsItem project={projects.memefeed} images={memes}/>
+        <DashedDiver/>
+        <ResumeProjectsItem project={projects.spaceexplore}/>
+      </Container>
+    </Layout>
+  )
+}
 
 export default Resume
 
@@ -94,7 +109,49 @@ export const pageQuery = graphql`
           ...GatsbyImageSharpFluid
         }
       }
-    }
+    },
+    facerec1: file(relativePath: {eq: "facerec1.png"}) {
+      childImageSharp {
+        fluid(maxWidth: 800) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    },
+    facerec2: file(relativePath: {eq: "facerec2.png"}) {
+      childImageSharp {
+        fluid(maxWidth: 800) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    },
+    facerec3: file(relativePath: {eq: "facerec3.png"}) {
+      childImageSharp {
+        fluid(maxWidth: 800) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    },
+    memefeed1: file(relativePath: {eq: "memefeed1.png"}) {
+      childImageSharp {
+        fluid(maxWidth: 800) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    },
+    memefeed2: file(relativePath: {eq: "memefeed2.png"}) {
+      childImageSharp {
+        fluid(maxWidth: 800) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    },
+    memefeed3: file(relativePath: {eq: "memefeed3.png"}) {
+      childImageSharp {
+        fluid(maxWidth: 800) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    },
   }
 `;
 
