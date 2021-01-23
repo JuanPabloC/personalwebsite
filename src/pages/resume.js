@@ -55,9 +55,9 @@ const Resume = (props) => {
         <ResumeSection title={"Projects"}/>
         <ResumeProjectsItem project={projects.personalwebsite}/>
         <DashedDiver/>
-        <ResumeProjectsItem project={projects.facerecognitionbrain} images={[props.data.memefeed1.childImageSharp.fluid, props.data.memefeed2.childImageSharp.fluid, props.data.memefeed3.childImageSharp.fluid]}/>
+        <ResumeProjectsItem project={projects.facerecognitionbrain} images={[props.data.facerec1.childImageSharp.fluid, props.data.facerec2.childImageSharp.fluid, props.data.facerec3.childImageSharp.fluid]}/>
         <DashedDiver/>
-        <ResumeProjectsItem project={projects.memefeed} images={[props.data.facerec1.childImageSharp.fluid, props.data.facerec2.childImageSharp.fluid, props.data.facerec3.childImageSharp.fluid]}/>
+        <ResumeProjectsItem project={projects.memefeed} images={[props.data.memefeed1.childImageSharp.fluid, props.data.memefeed2.childImageSharp.fluid, props.data.memefeed3.childImageSharp.fluid]}/>
         <DashedDiver/>
         <ResumeProjectsItem project={projects.spaceexplore}/>
       </Container>
