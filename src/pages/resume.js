@@ -37,19 +37,6 @@ const DashedDiver=styled("hr")`
 `;
 
 const Resume = (props) => {
-  // projects.facerecognitionbrain.images = [props.data.facerec1, props.data.facerec2, props.data.facerec3]
-  // projects.memefeed.images = [props.data.memefeed1, props.data.memefeed2, props.data.memefeed3]
-  
-  // console.log(projects.facerecognitionbrain.images)
-
-  let face = props.data.facerec1.childImageSharp.fluid
-  let meme = props.data.memefeed1.childImageSharp.fluid
-
-  const memes = [props.data.facerec1.childImageSharp.fluid, props.data.facerec2.childImageSharp.fluid, props.data.facerec3.childImageSharp.fluid]
-  const faces = [props.data.memefeed1.childImageSharp.fluid, props.data.memefeed2.childImageSharp.fluid, props.data.memefeed3.childImageSharp.fluid]
-
-  console.log(memes)
-  console.log(faces)
   return (
     <Layout>
       <SEO title="Resume" />
@@ -68,9 +55,9 @@ const Resume = (props) => {
         <ResumeSection title={"Projects"}/>
         <ResumeProjectsItem project={projects.personalwebsite}/>
         <DashedDiver/>
-        <ResumeProjectsItem project={projects.facerecognitionbrain} images={faces}/>
+        <ResumeProjectsItem project={projects.facerecognitionbrain} images={[props.data.memefeed1.childImageSharp.fluid, props.data.memefeed2.childImageSharp.fluid, props.data.memefeed3.childImageSharp.fluid]}/>
         <DashedDiver/>
-        <ResumeProjectsItem project={projects.memefeed} images={memes}/>
+        <ResumeProjectsItem project={projects.memefeed} images={[props.data.facerec1.childImageSharp.fluid, props.data.facerec2.childImageSharp.fluid, props.data.facerec3.childImageSharp.fluid]}/>
         <DashedDiver/>
         <ResumeProjectsItem project={projects.spaceexplore}/>
       </Container>
