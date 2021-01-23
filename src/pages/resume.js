@@ -268,7 +268,7 @@ let projects = {
   personalwebsite: {
     title: "My Personal Website",
     date: "2020-2021",
-    description: "",
+    description: "Built a personal website to showcase my front end development skills and keep all relevant information in one place. Hosted on Netlify using Continuous Deployment.\n\nBuilt with Gatsby.js, using HTML, CSS, Javascript, Node.js and React.",
     languages: [
       
     ],

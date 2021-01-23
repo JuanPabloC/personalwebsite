@@ -66,7 +66,7 @@ const ResumeProjectItem = (props) => {
                     <ResumeItemHeading>
                         <ResumeItemTitle>{props.project.title}</ResumeItemTitle>
                     </ResumeItemHeading>
-                    <p>{props.project.description}</p>
+                    <p style={{whiteSpace: 'pre-wrap'}}>{props.project.description}</p>
 
                 </Col>
                 {/* Date */}
