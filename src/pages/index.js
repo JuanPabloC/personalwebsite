@@ -54,11 +54,11 @@ export const pageQuery = graphql`
   }
 `;
 
-const whoamiText = `Hello! My name is Juan Pablo Castaño, but I go by JP. I was born and raised in Mexico, but have lived in the US for 6 years. Even though I love everything about Mexico, and that\'s where most of my family is, I decided in high school that I wanted to branch out and continue my education in the US. That led me to the University of Rochester, where I graduated as part of the Class of 2018 with a BS in Computer Science and a minor in Business. Even though completely unfamiliar at first,I will always love and appreciate Rochester, NY for the countless memories and for connecting me to now life-long friends.
+const whoamiText = `Hello! My name is Juan Pablo Castaño, but I go by JP. I was born and raised in Mexico, and have lived in the US for 6 years. Even though I love everything about Mexico, and that\'s where most of my family is, I decided in high school that I wanted to branch out and continue my education in the US. That led me to the University of Rochester, where I graduated as part of the Class of 2018 with a BS in Computer Science and a minor in Business. I will always appreciate Rochester, NY for the countless memories and for connecting me to now life-long friends.
 
 When I graduated, I decided to take a leap of faith and follow my dream of living in New York City. So, I moved to the big apple with no job or savings, but with a plan and an amazing support system of friends and family.
 
-After a couple stressful months of job searching, I got the opportunity to join Code Climate, an awesome startup leading the Engineering Intelligence industry. I joined as a Sales Development Representative and spent the next two years working and learning alongside incredible minds, some of which I now call best friends. Now, I'm looking for my next big move.`
+After a couple of stressful months of job searching, I got the opportunity to join Code Climate, an awesome startup leading the Engineering Intelligence industry. I joined as a Sales Development Representative and spent the next two years working and learning alongside incredible minds, some of which I now call best friends. Now, I'm looking for my next big move.`
 
 const whereimatText = `I am currently looking to kickstart my career as a Software Engineer! With a Computer Science degree, software engineering internship experience, continuous programming practice and education, and two years at a tech start-up, I have a great foundation to start as a junior developer.
 
@@ -66,7 +66,7 @@ My goal is to join a tech company that prides itself in their positive impact to
 
 Most of my coding experience falls under web development, particularly front-end (I built this website myself from scratch). I am, however, very interested and excited to learn new languages, technologies and practices that would help me grow to be well-rounded engineer.`
 
-const whativalueText = `• Gratitude: I had the privilege of growing up in a loving and supporting family, where my parents gave me everything I needed to be successful. I'll forever be grateful for their love and support, and now I try to live my life never forgetting to be thankful for everything I have.  
+const whativalueText = `• Gratitude: I had the privilege of growing up in a loving and supporting family, where my parents provided me everything I needed to be successful. I'll forever be grateful for their love and support, and now I try to live my life never forgetting to be thankful for everything I have.  
    
 • Honesty & Openness: Communication is key. I believe in the power of good communication both in our personal and professional lives, but it only works if it's honest. This is why I try to always be as open and honest as possible with family, friends, and colleagues, even when it's hard or uncomfortable.
 
