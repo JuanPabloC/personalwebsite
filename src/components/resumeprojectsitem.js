@@ -62,7 +62,7 @@ const ResumeProjectItem = (props) => {
         <div>
             <Row css={bottomMargin}>
                 {/* Body */}
-                <Col span={18}>
+                <Col span={21}>
                     <ResumeItemHeading>
                         <ResumeItemTitle>{props.project.title}</ResumeItemTitle>
                     </ResumeItemHeading>
@@ -70,7 +70,7 @@ const ResumeProjectItem = (props) => {
 
                 </Col>
                 {/* Date */}
-                <Col span={6}>
+                <Col span={3}>
                     <ResumeItemDate>{props.project.date}</ResumeItemDate>
                 </Col>
             </Row>

@@ -268,7 +268,7 @@ let projects = {
   personalwebsite: {
     title: "My Personal Website",
     date: "2020-2021",
-    description: "Built a personal website to showcase my front end development skills and keep all relevant information in one place. Hosted on Netlify using Continuous Deployment.\n\nBuilt with Gatsby.js, using HTML, CSS, Javascript, Node.js and React.",
+    description: "Started this website to continue practicing my coding skills, learn new ones, and stay up-to-date on CI/CD practices. \nBuilt with Gatsby, React, HTML5, CSS in JS, Javascript and Node.js, deployed on Netlify using Continuous Deployment with Github repositories.",
     languages: [
       
     ],
@@ -279,7 +279,7 @@ let projects = {
   facerecognitionbrain: {
     title: "Face Recognition Brain",
     date: "2018",
-    description: "Final project for Full-Stack Web-Development online course",
+    description: "Final project for Full-Stack Web Development online course\nBuilt and deployed application on Heroku that recognizes and frames a face in an image using Clarifai’s AI library, HTML, CSS, Javascript, React, Node.js and Express.",
     languages: [
       
     ],
@@ -301,7 +301,7 @@ let projects = {
   spaceexplore: {
     title: "SpaceExplore",
     date: "2017",
-    description: "Pair-programmed webapplication for Web Technologies course using XHTML, CSS, Javascript and SQLite.",
+    description: "Pair-programmed web application for Web Technologies course using XHTML, CSS, Javascript and SQLite.",
     languages: [
       
     ],
