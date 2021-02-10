@@ -40,8 +40,9 @@ const SkillsBox = (props) => {
                         <Menu.ItemGroup key="g1" title="Skills">
                             <Menu.Item key={1} onClick={() => setCurrentList(props.skills.software)}>{props.skills.software.title}</Menu.Item>
                             <Menu.Item key={2} onClick={() => setCurrentList(props.skills.frameworks)}>{props.skills.frameworks.title}</Menu.Item>
-                            <Menu.Item key={3} onClick={() => setCurrentList(props.skills.communication)}>{props.skills.communication.title}</Menu.Item>
-                            <Menu.Item key={4} onClick={() => setCurrentList(props.skills.languages)}>{props.skills.languages.title}</Menu.Item>
+                            <Menu.Item key={3} onClick={() => setCurrentList(props.skills.foundations)}>{props.skills.foundations.title}</Menu.Item>
+                            <Menu.Item key={4} onClick={() => setCurrentList(props.skills.communication)}>{props.skills.communication.title}</Menu.Item>
+                            <Menu.Item key={5} onClick={() => setCurrentList(props.skills.languages)}>{props.skills.languages.title}</Menu.Item>
                         </Menu.ItemGroup>
                     </Menu>
                 </Sider>

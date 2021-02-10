@@ -63,8 +63,8 @@ let skills = {
         level: 0.6
       },
       {
-        name: "Swift",
-        level: 0.1
+        name: "SQL",
+        level: 0.5
       }
     ]
   },
@@ -77,6 +77,10 @@ let skills = {
       },
       {
         name: "Node.js",
+        level: 0.4
+      },
+      {
+        name: "Gatsby",
         level: 0.4
       },
       {
@@ -94,14 +98,6 @@ let skills = {
       {
         name: "GitHub",
         level: 0.8
-      },
-      {
-        name: "JIRA",
-        level: 0.3
-      },
-      {
-        name: "Salesforce",
-        level: 0.5
       }
     ]
   },
@@ -131,6 +127,35 @@ let skills = {
       {
         name: "Coaching",
         level: 0.6
+      }
+    ]
+  },
+  foundations: {
+    title: "Foundations",
+    skills: [
+      {
+        name: "Object-Oriented Programming",
+        level: 0.7
+      },
+      {
+        name: "Front End Development",
+        level: 0.7
+      },
+      {
+        name: "Full-Stack Web Development",
+        level: 0.4
+      },
+      {
+        name: "Continuous Deployment",
+        level: 0.5
+      },
+      {
+        name: "Data Structures",
+        level: 0.9
+      },
+      {
+        name: "Algorithms",
+        level: 0.9
       }
     ]
   },
