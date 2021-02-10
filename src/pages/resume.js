@@ -196,7 +196,7 @@ let resumeJobs = {
         responsibilities: [
           "Developed front-end and back-end of new web application for employee information management that improved efficiency for Human Resources processes. Application will be able to save hours of labor for 100+ engineers and administrators.",
           "Responsible for the full process of the application development and the constant user-developer communication.",
-          "Extensive usage of technologies including REST APIs, HTML, CSS, Javascript (including frameworks), PostgreSQL, wireframe tools and version-control systems."
+          "Quickly adopted Backbone.js, Underscore.js and jQuery and used HTML5, CSS3, Git and RESTful API skills."
         ]
       }
     ]
